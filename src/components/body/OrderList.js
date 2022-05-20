@@ -1,10 +1,13 @@
 import { OrderListData } from './OrderListData'
 import { Box, Typography, Paper } from '@mui/material';
 import { TableCell, TableRow, TableContainer, TableHead, TableBody, Table } from '@mui/material';
+import { useTheme } from '@mui/material'
+
 export default function OrderList() {
+    const theme = useTheme();
     return (
         <Box sx={{display:'flex-row'}}>
-            <Typography variant='h5' sx={{ marginBottom: "10px", fontSize: "18px", fontWeight: 'bold' }}> OrderList </Typography>
+            <Typography variant='h5' sx={{ marginBottom: "10px", fontSize: "18px", fontWeight: 'bold',color: theme.light.color1 }}> OrderList </Typography>
             
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
